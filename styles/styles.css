@@ -1,0 +1,250 @@
+@font-face {
+    font-family: "PT Sans";
+    
+    font-style: normal;
+    font-weight: 400;
+    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+  font-display: swap;    
+  }
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("fonts/pt-sans-bold.woff2") format("woff2");
+    font-display: swap;
+  }
+
+  body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    background-color: #FFFFFF;
+  }
+
+  .button {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #83B3D3;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .page-header {
+    color: #000000;
+    background: #FFFFFF;
+  }
+
+  .navigation-link {
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .main-index {
+    color: #333333;
+    background-color: #FFFFFF;
+    background-image: url("images/index-bg.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+    
+  .main-inner {
+    color: #333333;
+    background-color: #FFFFFF;
+    background-image: url("images/catalog-bg.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  .welcome-hidden {
+    font-family: "PT Sans", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-transform: uppercase;    
+  }
+
+  .welcome-description {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .advantages-list {
+    text-align: center;
+  }
+
+  .advantages-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  .search {
+    background-color: #FFFFFF;  
+    text-align: center;  
+  }
+
+  .search-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .search-description {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .mailing {
+    background-image: url("images/bg.jpg");
+    background-color: #83B3D3; 
+    color: #FFFFFF;
+    text-align: center;    
+  }
+
+  .mailing-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+
+  .mailing-description{
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .page-footer {
+    color: #000000;
+    background-color: #FFFFFF; 
+  }
+
+  .footer-contacts-address-phone {
+    color: #000000;
+    font-size: 40px;
+    line-height: 40px;
+    text-decoration: none;
+  }
+
+  .sorting-container {
+    color: #FFFFFF;
+    background-color: #83B3D3;
+  }
+
+  .inner-header-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+  }
+
+  .breadcrumbs-link {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  
+  .catalog-filter-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .control-label {
+    font-size: 18px;
+    line-height: 23px;  
+  }
+
+  .hotel-found {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 39px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .product-card-title {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+  }
+  
+  .product-card-link {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .product-list {
+    color: #333333;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .product-card-price {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    color: #333333;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .mailing-inner {
+    background-color: #FFFFFF; 
+    text-align: center;    
+  }
+
+  .mailing-title-inner {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .mailing-description-inner{
+    font-size: 22px;
+    line-height: 26px;
+    color: #333333;
+  }
+
+  
+
+  
+
+
+
+
+
+  
