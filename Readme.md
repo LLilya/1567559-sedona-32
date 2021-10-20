@@ -1,6 +1,6 @@
 # Личный проект «Седона»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/32/user/1567559).
+* Студент: [Лилия Липина](https://up.htmlacademy.ru/htmlcss/32/user/1567559).
 * Наставник: [Вера Шингарева](https://htmlacademy.ru/profile/id1632741).
 
 ---
