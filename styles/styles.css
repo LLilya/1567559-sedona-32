@@ -15,7 +15,15 @@
     font-display: swap;
   }
 
+  html {
+    height: 100%;
+  }
+
   body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -40,6 +48,42 @@
     background: #FFFFFF;
   }
 
+  .navigation {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .navigation-list {
+    width: 310px;
+    margin: 0;
+    padding: 0; 
+  }
+  
+  .navigation-menu {
+    margin-left: 71px;
+  }
+
+  .navigation-user {
+    max-width: 250px;
+    margin-right: 72px;
+  }
+
+  .logo,
+  .welcome-logo,
+  .welcome-divider {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .welcome-logo{
+    padding-bottom: 25px;
+  }
+
+  .main-container {
+    flex-grow: 1;
+  }
+
   .navigation-link {
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
@@ -54,18 +98,30 @@
   .main-index {
     color: #333333;
     background-color: #FFFFFF;
-    background-image: url("images/index-bg.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     text-align: center;
   }
-    
+     
   .main-inner {
     color: #333333;
     background-color: #FFFFFF;
-    background-image: url("images/catalog-bg.png");
+    background-image: url("../img/catalog-bg.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+  }
+
+  .welcome {
+    color: #333333;
+    background-color: #FFFFFF;
+    background-image: url("../img/index-bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 51px;
+  }
+
+  .page-container {
+    width: 1200px;
+    margin: 0 auto;
   }
 
   .welcome-hidden {
@@ -84,6 +140,8 @@
   }
 
   .advantages-list {
+    margin: 0;
+    padding: 0;
     text-align: center;
   }
 
@@ -117,10 +175,11 @@
   }
 
   .mailing {
-    background-image: url("images/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-color: #83B3D3; 
     color: #FFFFFF;
-    text-align: center;    
+    text-align: center; 
+    background-repeat: no-repeat;   
   }
 
   .mailing-title {
@@ -140,12 +199,35 @@
     color: #000000;
     background-color: #FFFFFF; 
   }
+  
+  .page-footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    margin-left: 72px;
+  }
+
+  .htmlacademy-link {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: 72px;
+    margin-top: 42px;
+  }
 
   .footer-contacts-address-phone {
+    display: block;
+    margin: 0 auto;
     color: #000000;
     font-size: 40px;
     line-height: 40px;
     text-decoration: none;
+    margin-top: 40px;
   }
 
   .sorting-container {
@@ -158,14 +240,42 @@
     font-weight: 700;
     font-size: 60px;
     line-height: 78px;
+    color: #FFFFFF;
+  }
+
+  .catalog-filter {
+    display: flex;
+    width: 1200px;
+    font-family: "PT Sans", sans-serif;
+    color: #FFFFFF;
+  }
+
+  .catalog-left-column {
+    width: 150px;
+    margin-left: 71px;
+    margin-right: 67px;
+  }
+
+  .catalog-center-column {
+    width: 145px;
+    margin-right: 167px;
+  }
+
+  .catalog-right-column {
+    width: 287px;
+    margin-right: 81px;
+  }
+
+  .catalog-button-column {
+    width: 2160px;
+    margin-right: 72px;
   }
 
   .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
   }
-
-  
+    
   .catalog-filter-title {
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
@@ -219,6 +329,18 @@
     line-height: 23px;
   }
 
+  .product-card-button-more {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #756257;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   .mailing-inner {
     background-color: #FFFFFF; 
     text-align: center;    
@@ -239,8 +361,25 @@
     color: #333333;
   }
 
-  
+  .pagination {
+    display: flex;
+    width: 1200px;
+  }
 
+  .pagination-list {
+    width: 370px;
+    margin: 0;
+    padding: 0; 
+    margin-left: 72px; 
+  }
+  
+  .pagination-how-much {
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: 72px;
+  }
+
+ 
   
 
 
