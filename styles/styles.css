@@ -3,7 +3,7 @@
     
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("../fonts/pt-sans-regular.woff2") format("woff2");
   font-display: swap;    
   }
 
@@ -11,7 +11,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("../fonts/pt-sans-bold.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -31,6 +31,25 @@
     background-color: #FFFFFF;
   }
 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  p.product-card-rating {
+    width: 160px;
+    text-align: center;
+    color: #333333;
+    background-color: #F2F2F2;
+    text-transform: uppercase;
+  }
+
   .button {
     font-family: inherit;
     font-size: 16px;
@@ -42,7 +61,7 @@
     text-decoration: none;
     text-transform: uppercase;
   }
-
+  
   .page-header {
     color: #000000;
     background: #FFFFFF;
@@ -55,25 +74,60 @@
   }
 
   .navigation-list {
-    width: 310px;
+    display: flex;
+    flex-wrap: wrap; 
+    width: 385px;
     margin: 0;
     padding: 0; 
+    list-style-type: none;
   }
-  
+
+  .navigation-link {
+    display: block;
+    padding: 19px 16px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    background-color: #FFFFFF;
+    text-decoration: none;
+  }
+
   .navigation-menu {
-    margin-left: 71px;
+    margin-left: 55px;
   }
 
   .navigation-user {
-    max-width: 250px;
-    margin-right: 72px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: 36px;
   }
 
+  .navigation-user .navigation-link {
+    min-width: 18px;
+    min-height: 27px;
+  }
+  
   .logo,
   .welcome-logo,
   .welcome-divider {
     display: block;
     margin: 0 auto;
+  }
+
+  .want-here {
+    margin: 0;
+    margin-top: 14px;
+    padding: 9px 20px 5px 20px;
+    font-family: inherit;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #756257;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 
   .welcome-logo{
@@ -84,15 +138,8 @@
     flex-grow: 1;
   }
 
-  .navigation-link {
-    font-family: "PT Sans", sans-serif;
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-    color: #000000;
-    background-color: #FFFFFF;
-    text-decoration: none;
+  .welcome-divider{
+    margin-bottom: 63px;
   }
 
   .main-index {
@@ -104,9 +151,6 @@
   .main-inner {
     color: #333333;
     background-color: #FFFFFF;
-    background-image: url("../img/catalog-bg.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
   }
 
   .welcome {
@@ -119,11 +163,20 @@
     padding-top: 51px;
   }
 
+  .catalog-products {
+    color: #333333;
+    background-color: #FFFFFF;
+    background-image: url("../img/catalog-bg.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  
   .page-container {
     width: 1200px;
     margin: 0 auto;
   }
 
+ 
   .welcome-hidden {
     font-family: "PT Sans", sans-serif;
     font-size: 30px;
@@ -131,7 +184,8 @@
     font-weight: 700;
     color: #000000;
     background-color: #FFFFFF;
-    text-transform: uppercase;    
+    text-transform: uppercase; 
+    margin-bottom: 23px;   
   }
 
   .welcome-description {
@@ -143,6 +197,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
+    list-style-type: none;
   }
 
   .advantages-title {
@@ -158,6 +213,8 @@
   .search {
     background-color: #FFFFFF;  
     text-align: center;  
+    margin-top: 91px;
+    margin-bottom: 91px;
   }
 
   .search-title {
@@ -167,11 +224,13 @@
     line-height: 36px;
     color: #000000;
     text-transform: uppercase;
+    padding-bottom: 15px;
   }
 
   .search-description {
     font-size: 22px;
     line-height: 26px;
+    padding-bottom: 20px;
   }
 
   .mailing {
@@ -179,7 +238,7 @@
     background-color: #83B3D3; 
     color: #FFFFFF;
     text-align: center; 
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
   }
 
   .mailing-title {
@@ -188,16 +247,23 @@
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    padding-top: 94px;
+    padding-bottom: 15px;
   }
 
   .mailing-description{
     font-size: 22px;
     line-height: 26px;
+    padding-bottom: 26px;
   }
 
+  .mailing-form {
+    padding-bottom: 94px;
+  }
+  
   .page-footer {
+    background-color: #FFFFFF;
     color: #000000;
-    background-color: #FFFFFF; 
   }
   
   .page-footer-container {
@@ -207,17 +273,30 @@
   }
 
   .footer-social {
-    width: 200px;
-    margin: 0;
-    padding: 0;
+    max-width: 120px;
     margin-left: 72px;
   }
 
+  .footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    margin-right: 29px;
+    list-style-type: none;
+  }
+
+  .footer-social-item {
+    width: 20px;
+    height: 20px;
+  }
+
   .htmlacademy-link {
-    max-width: 200px;
+    max-width: 120px;
     margin-left: auto;
     margin-right: 72px;
     margin-top: 42px;
+    margin-bottom: 44px;
   }
 
   .footer-contacts-address-phone {
@@ -228,12 +307,18 @@
     line-height: 40px;
     text-decoration: none;
     margin-top: 40px;
+    margin-bottom: 30px;
   }
 
+
   .sorting-container {
-    color: #FFFFFF;
-    background-color: #83B3D3;
-  }
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    color: #333333;
+    background-color: #FFFFFF;
+   }
+
 
   .inner-header-title {
     font-family: "PT Sans", sans-serif;
@@ -293,8 +378,10 @@
     font-weight: 700;
     font-size: 30px;
     line-height: 39px;
-    color: #000000;
     text-transform: uppercase;
+    margin-left: 71px; 
+    width: auto;
+    color: #000000;
   }
 
   .product-card-title {
@@ -367,9 +454,9 @@
   }
 
   .pagination-list {
-    width: 370px;
     margin: 0;
     padding: 0; 
+    width: 1056px;
     margin-left: 72px; 
   }
   
