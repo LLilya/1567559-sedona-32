@@ -42,14 +42,6 @@
     overflow: hidden;
   }
 
-  p.product-card-rating {
-    width: 160px;
-    text-align: center;
-    color: #333333;
-    background-color: #F2F2F2;
-    text-transform: uppercase;
-  }
-
   .button {
     font-family: inherit;
     font-size: 16px;
@@ -118,16 +110,8 @@
   }
 
   .want-here {
-    margin: 0;
-    margin-top: 14px;
-    padding: 9px 20px 5px 20px;
-    font-family: inherit;
-    line-height: 16px;
-    text-align: center;
     color: #FFFFFF;
     background-color: #756257;
-    text-decoration: none;
-    text-transform: uppercase;
   }
 
   .welcome-logo{
@@ -211,6 +195,7 @@
   }
 
   .search {
+    display: block;
     background-color: #FFFFFF;  
     text-align: center;  
     margin-top: 91px;
@@ -231,6 +216,24 @@
     font-size: 22px;
     line-height: 26px;
     padding-bottom: 20px;
+  }
+
+  .hotel-search {
+    display: block;
+    box-sizing: border-box;
+    font-size: 20px;
+    width: 575px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #756257;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 auto;
   }
 
   .mailing {
@@ -319,6 +322,15 @@
     background-color: #FFFFFF;
    }
 
+   .sorting-type {
+    margin-right: auto;
+  }
+
+   .sorting-container .button {
+    width: 48px;
+    height: 48px;
+  }
+
 
   .inner-header-title {
     font-family: "PT Sans", sans-serif;
@@ -354,6 +366,14 @@
   .catalog-button-column {
     width: 2160px;
     margin-right: 72px;
+  }
+
+  .breadcrumbs {
+    display: flex;
+    margin: 0;
+    padding: 0; 
+    color: #FFFFFF;
+    list-style-type: none;
   }
 
   .breadcrumbs-link {
@@ -402,6 +422,9 @@
   }
 
   .product-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     color: #333333;
     background-color: #FFFFFF;
     font-size: 18px;
@@ -417,20 +440,28 @@
   }
 
   .product-card-button-more {
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 700;
-    text-align: center;
     color: #FFFFFF;
     background-color: #756257;
-    text-decoration: none;
+  }
+
+  .product-card-button_on {
+    color: #FFFFFF;
+    background-color: #7DB54F;
+  }
+
+  p.product-card-rating {
+    width: 160px;
+    text-align: center;
+    color: #333333;
+    background-color: #F2F2F2;
     text-transform: uppercase;
   }
 
   .mailing-inner {
     background-color: #FFFFFF; 
-    text-align: center;    
+    text-align: center; 
+    margin-top: 58px;   
+    margin-bottom: 138px;
   }
 
   .mailing-title-inner {
@@ -440,32 +471,77 @@
     line-height: 36px;
     color: #000000;
     text-transform: uppercase;
+    padding-bottom: 15px;
   }
 
   .mailing-description-inner{
     font-size: 22px;
     line-height: 26px;
     color: #333333;
+    padding-bottom: 26px;
   }
 
   .pagination {
     display: flex;
     width: 1200px;
-  }
-
-  .pagination-list {
-    margin: 0;
-    padding: 0; 
-    width: 1056px;
-    margin-left: 72px; 
+    margin-top: 31px;
+    margin-bottom: 30px;
   }
   
+  .pagination-list {
+    display: flex;
+    margin: 0;
+    padding: 0; 
+    margin-left: 72px; 
+    list-style-type: none;
+  }
+
+  .pagination-item:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  .pagination-link {
+    display: block;
+    box-sizing: border-box;
+    font-size: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px 20px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #83B3D3;
+    text-decoration: none;
+  }
+
+  .pagination-current {
+    color: #000000;
+    background-color: #F2F2F2;   
+  }
+
+  .pagination-block{
+    margin: 31px 288px 30px 287px;
+
+  }
+
+  .show-more {
+    text-align: center;
+    width: 625px;
+    height: 55px;
+    text-transform: uppercase;
+  }
+
   .pagination-how-much {
     max-width: 390px;
     margin-left: auto;
     margin-right: 72px;
   }
 
+  .mailing-form-inner {
+    margin-bottom: 138px;
+  }
  
   
 
