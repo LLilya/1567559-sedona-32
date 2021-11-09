@@ -3,7 +3,7 @@
     
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;    
   }
 
@@ -11,24 +11,27 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
   }
 
   html {
     height: 100%;
+    background-color: #E5E5E5;
   }
 
   body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    width: 1200px;
     min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
   }
 
   .visually-hidden {
@@ -43,6 +46,9 @@
   }
 
   .button {
+    display: inline-block;
+    height: 37px;
+    border-radius: 4px;
     font-family: inherit;
     font-size: 16px;
     line-height: 16px;
@@ -103,7 +109,12 @@
     min-height: 27px;
   }
   
-  .logo,
+  .logo {
+    display: block;
+    position: absolute;
+    left: 571px;
+    right: 571px;
+  }
   .welcome-logo,
   .welcome-divider {
     display: block;
@@ -114,7 +125,6 @@
     margin: 0;
     padding: 0;
     width: 160px;
-    height: 37px;
     color: #FFFFFF;
     background-color: #756257;
     text-align: center;
@@ -126,7 +136,9 @@
 
   .main-container {
     flex-grow: 1;
-    background-color: #E5E5E5;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
   }
 
   .welcome-divider{
@@ -162,12 +174,6 @@
     background-repeat: no-repeat;
   }
   
-  .page-container {
-    width: 1200px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
-  }
- 
   .welcome-hidden {
     font-family: "PT Sans", sans-serif;
     font-size: 30px;
@@ -199,8 +205,6 @@
   }
 
   .advantages-title {
-    padding: 0;
-    margin: 0;
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -208,36 +212,37 @@
     text-transform: uppercase; 
   }
 
-  .block-city,
-  .block-brige {
-    grid-column: 1 / -1;
-    display: flex;
-  }
-
   .advantages-item {
     margin: 0;
     padding: 0;
   }
+
+  .advantages-item:nth-child(1),
+  .advantages-item:nth-child(5) {
+    grid-column: 1 / -1;
+    display: flex;
+    background-color: #83B3D3;
+    color: #FFFFFF;
+  }
+  .advantages-item:nth-child(2),
+  .advantages-item:nth-child(4),
+  .advantages-item:nth-child(6),
+  .advantages-item:nth-child(8) {
+    background-color: #83B3D31F; 
+  }
+
+  .advantages-item:nth-child(7) {
+    background-color: #83B3D333;
+  }
   
   .advantages-block {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     width: 400px;
     height: 384px;
     justify-content: center;
-    color: #FFFFFF;
-    background-color: #83B3D3;
-  }
-
-  .block-lodging,
-  .block-souvenirs,
-  .block-square,
-  .block-tourists {
-    background-color: rgba(131, 179, 211, 0.12);
-  }
-
-  .block-road {
-    background: rgba(131, 179, 211, 0.2);
   }
 
   .search {
@@ -310,6 +315,7 @@
   .page-footer {
     background-color: #E5E5E5;
     color: #000000;
+    margin-top: auto;
   }
   
   .page-footer-container {
@@ -450,6 +456,8 @@
   
   
   .product-card-title {
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -468,9 +476,6 @@
   }
 
   .product-list {
-    display: grid;
-    grid-template-columns: 1200px;
-    grid-template-rows: repeat(4, 181px);
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -481,15 +486,35 @@
   }
 
   .product-card {
-    display: flex;
-    margin: 31px 72px 30px 72px;
+    display: grid;
+    width: 1056px;
+    height: 181px;
+    grid-template-columns: 180px auto 160px;
+    gap: 30px 20px;
   }
 
   .product-card-block {
     display: grid;
+    height: 181px;
+    grid-template-columns: 151px auto;
+    grid-template-rows: 31px auto 37px;
+    column-gap: 8px;
   }
 
+  .product-card-link-title {
+    grid-column: 1 / -1;
+  }
+
+  .product-block-rating{
+    display: grid;
+    width: 160px;
+    height: 181px;
+  }
+
+  .product-card-type,
   .product-card-price {
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     color: #333333;
@@ -497,18 +522,27 @@
     line-height: 23px;
   }
 
+  .product-card-button {
+    width: 160px;
+  }
+
   .product-card-button-more {
+    width: 151px;
     color: #FFFFFF;
     background-color: #756257;
   }
 
   .product-card-button_on {
+    width: 160px;
     color: #FFFFFF;
     background-color: #7DB54F;
   }
 
   p.product-card-rating {
+    display: block;
     width: 160px;
+    height: 37px;
+    border-radius: 4px;
     font-size: 16px;
     text-align: center;
     color: #333333;
