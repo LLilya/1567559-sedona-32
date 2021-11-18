@@ -32,6 +32,7 @@
     line-height: 21px;
     color: #333333;
     background-color: #FFFFFF;
+    box-shadow: 0 18px 40px rgba(79, 70, 60, 0.16);
   }
 
   .visually-hidden {
@@ -87,7 +88,7 @@
   .button + .button {
     margin-left: 6px;
   }
-  
+
   .page-header {
     color: #000000;
   }
@@ -108,6 +109,10 @@
     padding: 0; 
     list-style-type: none;
     justify-content: center;
+  }
+
+  .navigation-item {
+    position: relative;
   }
 
   .navigation-link {
@@ -408,7 +413,7 @@
   }
 
   .mailing-field .field {
-    width: 600px; 
+    width: 600px;
   }
 
   .page-footer {
@@ -476,9 +481,149 @@
     text-decoration: none;
   }
 
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+  }
+
+  .modal-container-close {
+    display: none;
+  }
+
+  .modal {
+    position: relative;
+    margin: auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+  }
+
+  .modal-reservation {
+    width: 715px;
+    padding: 70px;
+  }
+
+  .modal-close-button {
+    display: block;
+    position: absolute;
+    padding: 0;
+    top: 54px;
+    right: 70px;
+    width: 53px;
+    height: 53px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../img/modal-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  .reservation-form-field {
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  .reservation-form .field-group {
+    margin: 0;
+  }
+
+  .reservation-form .field-group-number {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  .field-group-number {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 133px;
+    font-weight: 400;
+  }
+  
+  .field-group-number .control-label {
+    font-weight: 400;
+  }
+  
+  .reservation-form .field {
+    width: 420px;
+  }
+ 
+  .reservation-form-search {
+    font-size: 20px;
+    text-align: center;
+    width: 575px;
+    height: 60px;
+    color: #FFFFFF;
+    background-color: #83B3D3;
+  }
+
+  .reservation-date,
+  .reservation-number {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: start;
+    color: #000000;
+    background-color: #FFFFFF;
+  }
+
+  .reservation-arrival-date {
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #FF5757;
+    background-color: #FFFFFF;
+  }
+
+  .reservation-date-of-departure {
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #333333;
+    background-color: #FFFFFF;
+  }
+
+  .info {
+    display: block;
+    position: absolute;
+    padding: 0;
+    width: 25px;
+    height: 25px; 
+    margin-top: 4px;
+    left: 340px;
+    background-color: #83B3D3;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../img/info.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .breadcrumbs {
     display: flex;
-    position: relative;
     margin: 0;
     padding: 0; 
     color: #FFFFFF;
@@ -486,20 +631,39 @@
     padding-left: 71px;
     padding-top: 5px;
   }
+  
+  .breadcrumbs-link + .arrow-icon {
+    margin-left: 20px;
+  }
 
   .breadcrumbs-link {
     position: relative;
     font-size: 16px;
     line-height: 21px;
+    padding-left: 30px;
+    background-color: transparent;
+  }
+
+  .breadcrumbs-item {
+    position: relative;
   }
 
   .home-icon,
   .arrow-icon {
     position: absolute;
-    top: 0;
+    top: -15px;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: -10px;
+    margin: auto;
+  }
+
+  .arrow-icon {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    bottom: 0;
+    left: 11px;
     margin: auto;
   }
 
@@ -805,7 +969,6 @@
     display: grid;
     height: 120px;
     grid-template-columns: 151px auto;
-    grid-template-rows: 31px auto 37px;
     column-gap: 8px;
   }
 
@@ -863,13 +1026,15 @@
 
   .want-here-button:hover,
   .hotel-search:hover,
-  .product-card-button-more:hover {
+  .product-card-button-more:hover,
+  .button-light:hover {
     background-color: #615048;
   }
 
   .want-here-button:focus,
   .hotel-search:focus,
-  .product-card-button-more:focus {
+  .product-card-button-more:focus,
+  .button-light:focus {
     outline: none;
     border: 3px solid #83B3D3;
     background-color: #615048;
@@ -877,7 +1042,8 @@
   
   .want-here-button:disabled,
   .hotel-search:disabled,
-  .product-card-button-more:disabled {
+  .product-card-button-more:disabled,
+  .button-light:disabled {
     color: #E7E7E7;
     background-color: #615048;
   }
@@ -987,6 +1153,81 @@
     margin-right: 72px;
   }
 
+  .popover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 400px; 
+    font-family: "PT Sans", sans-serif;
+    color: #333333;
+    background-color: #FFFFFF;
+    min-height: 160px;
+    height: 232px;
+    border-radius: 20px;
+    border: 1px solid #E5E5E5;
+    display: none;
+  }
+
+  .popover-open {
+    display: block;
+  }
+
+  .popover-close-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #756257;
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .popover-content {
+    height: 100%;
+  }
+
+  .cart-item {
+    display: grid;
+    grid-template-columns: 48px 230px 20px;
+    column-gap: 17px;
+    padding-top: 25px;
+  }
+
+  .cart-item-title {
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #000000;
+  }
+  
+  .cart-item-type {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .card-item-image {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    padding-right: 17px; 
+  }
+
+  .cart-item-button {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    
+  }
+
+  .cart-item .button {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+  }
+
+  
    
   
 
