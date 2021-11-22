@@ -84,6 +84,11 @@
     outline: none;
     cursor: default;
   }
+
+  .button:active {
+    border: none;
+    color: #E5E5E5;
+  }
   
   .button + .button {
     margin-left: 6px;
@@ -143,6 +148,12 @@
     outline: 3px solid #83B3D3;
   }
 
+  .navigation-link-underline {
+    display: flex;
+    border-bottom: 2px solid #756257;
+    padding-top: 17px;
+  }
+
   .navigation-icon {
     position: absolute;
     top: 0;
@@ -155,7 +166,6 @@
   .navigation-menu {
     margin-top: 13px;
     margin-left: 55px;
-    margin-bottom: 17px;
   }
 
   .navigation-user {
@@ -499,6 +509,15 @@
     position: relative;  
   }
 
+  .footer-social-link:hover {
+    color: #68A2CA;
+  }
+
+  .footer-social-link:focus {
+    outline: 3px solid #83B3D3;
+    border-radius: 10px;  
+  }
+
   .social-icon {
     position: absolute;
     top: 0;
@@ -516,7 +535,7 @@
     margin-right: 72px;
   }
 
-  .footer-contacts-address-phone {
+   .footer-contacts-address-phone {
     display: block;
     box-sizing: border-box;
     padding: 15px;
@@ -568,7 +587,7 @@
   }
 
   .modal-reservation {
-    width: 715px;
+    width: 575px;
     padding: 70px;
   }
 
@@ -606,19 +625,33 @@
   }
 
   .reservation-form-field {
-    width: auto;
-    height: 30px;
+    width: 100%;
+
+    border: none;
     border-radius: 4px;
   }
 
-  .field-adults {
-    display: flex;
-    grid-column: 2 / 3;
+  .reservation-form-field:hover,
+  .field-children:hover,
+  .field-adults:hover,
+  .field-date:hover {
+    background-color: #E5E5E5;
+  }
+  
+  .reservation-form-field:focus,
+  .field-children:focus,
+  .field-adults:focus,
+  .field-date:focus {
+    background-color: #E5E5E5;
+    outline: 3px solid #83B3D3;
   }
 
-  .field-children {
-    display: flex;
-    grid-column: 4 / -1;
+  .reservation-form-field:active,
+  .field-children:active,
+  .field-adults:active,
+  .field-date:active {
+    background-color: #FFFFFF;
+    outline: 3px solid #333333;
   }
 
   .reservation-form .field-group {
@@ -639,10 +672,6 @@
   .field-group-number .control-label {
     font-weight: 400;
   }
-  
-  .reservation-form .field {
-    width: 420px;
-  }
  
   .reservation-form-search {
     font-size: 20px;
@@ -655,12 +684,18 @@
 
   .reservation-date,
   .reservation-number {
+    display: flex;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     font-weight: 700;
     text-align: start;
     color: #000000;
     background-color: #FFFFFF;
+    align-items: center;
+  }
+
+  .reservation-number-children {
+    padding-left: 56px;
   }
 
   .reservation-arrival-date {
@@ -685,9 +720,28 @@
     grid-column: 2 / -1;
   }
 
+  .field-date {
+    display: flex;
+    grid-column: 2 / -1;
+    background-color: #F2F2F2;
+  }
+
+  .field-adults {
+    display: flex;
+    grid-column: 2 / 3;
+    background-color: #F2F2F2;
+  }
+
+  .field-children {
+    display: flex;
+    grid-column: 4 / 5;
+    background-color: #F2F2F2;
+  }
+
   .info {
     display: block;
     position: absolute;
+    left: 475px;
     padding: 0;
     width: 25px;
     height: 25px; 
@@ -722,17 +776,16 @@
   }
 
   .field-button {
-
     display: block;
-    padding: 0;
-    width: 50px;
+    margin: 16px;
+    width: 18px;
+    height: 18px;
     border: none;
     background-color: #F2F2F2;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
-
 
   .field-button-minus {
     color: #E5E5E5;
@@ -743,6 +796,22 @@
   .field-button-plus {
     color: #E5E5E5;
     background-image: url("../img/plus.svg");
+  }
+
+  .field-button-minus:hover, 
+  .field-button-plus:hover {
+    color: #F2F2F2;
+  }
+
+  .field-button-minus:focus, 
+  .field-button-plus:focus {
+    color: #333333;
+    outline: 3px solid #83B3D3;
+  }
+
+  .calendar-button {
+    color: #E5E5E5;
+    background-image: url("../img/calendar.svg");
   }
 
   .breadcrumbs {
@@ -765,6 +834,17 @@
     line-height: 21px;
     padding-left: 30px;
     background-color: transparent;
+  }
+
+  .breadcrumbs-link:hover {
+    color: #e5e5e5;
+    background-color: transparent;
+  }
+
+  .breadcrumbs-link:focus {
+    color: #e5e5e5;
+    background-color: transparent;
+    outline: 3px solid #83B3D3;
   }
 
   .breadcrumbs-item {
@@ -1301,7 +1381,7 @@
     color: #333333;
     background-color: #FFFFFF;
     height: 100%;
-    min-height: 180px;
+    min-height: 230px;
     border-radius: 20px;
     border: 1px solid #E5E5E5;
     display: none;
@@ -1361,6 +1441,15 @@
   .cart-item-button {
     box-sizing: border-box;
     background-color: #FFFFFF; 
+  }
+
+  .cart-item-button:hover {
+    color: #F2F2F2;
+  }
+
+  .cart-item-button:focus {
+    background-color: #FFFFFF;
+    outline: 3px solid #83B3D3;
   }
 
 
