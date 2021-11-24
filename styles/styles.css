@@ -533,7 +533,7 @@
     border-radius: 10px;  
   }
 
-  .footer-social-list a:active svg {
+  .footer-social-list a:active {
     color: #E7E7E7;
   }
 
