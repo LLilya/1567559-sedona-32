@@ -149,6 +149,20 @@
 
   .navigation-link-underline {
     display: flex;
+    width: 70px;
+    position: absolute;
+    top: 46px;
+    left: 71px;
+    border-bottom: 2px solid #756257;
+    padding-top: 17px;
+  }
+
+  .navigation-link-underline-inner {
+    display: flex;
+    width: 93px;
+    position: absolute;
+    top: 46px;
+    left: 287px;
     border-bottom: 2px solid #756257;
     padding-top: 17px;
   }
@@ -296,11 +310,18 @@
   }
 
   .advantages-title {
+    margin: 0;
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase; 
+    padding-bottom: 30px;
+  }
+
+  .advantages-description {
+    margin: 0;
+    padding-top: 30px;
   }
 
   .advantages-item {
@@ -313,7 +334,7 @@
   .advantages-title:nth-child(4) {
     margin: 0;
     padding: 0;
-    margin-top: 125px;
+    padding-top: 95px;
   }
 
   .advantages-item:nth-child(1),
@@ -510,7 +531,7 @@
   .footer-social-item {
     width: 20px;
     height: 20px;
-    margin-right: 30px;
+    margin-right: 25px;
   }
 
   .footer-social-link {
@@ -551,7 +572,7 @@
     padding: 15px;
     max-width: 120px;
     margin-left: auto;
-    margin-right: 72px;
+    margin-right: 59px;
   }
 
    .footer-contacts-address-phone {
@@ -853,6 +874,8 @@
 
   .breadcrumbs-link {
     position: relative;
+    width: 18px;
+    height: 18px;
     font-size: 16px;
     line-height: 21px;
     padding-left: 20px;
@@ -877,7 +900,7 @@
 
   .home-icon {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -940,6 +963,11 @@
     background-repeat: no-repeat;
     background-position: right 20px center;
     appearance: none;
+  }
+
+  .select-control-how-much {
+    width: 160px;
+    margin-left: 45px;
   }
   
   .select-control:hover,
@@ -1087,7 +1115,7 @@
 
   .button-catalog:focus {
     border-radius: 4px;
-    outline: 3px solid #232629;
+    outline: 3px solid #83B3D3;
   }
 
   .button-to-apply {
@@ -1096,7 +1124,7 @@
     padding: 15px 10px;
   }
 
-  .button button-to-apply:focus {
+  .button-to-apply:focus {
     outline: 3px solid #FFFFFF;
   }
 
@@ -1140,16 +1168,16 @@
     color: #FFFFFF;
   }
 
-  .catalog-filter-label:hover {
+  .range-input:hover {
     border-color: #E5E5E5;
   }
 
-  .catalog-filter-label:focus {
+  .range-input:focus {
     border: 2px solid #FFFFFF;
     outline: 1px solid #83B3D3;
   }
 
-  .catalog-filter-label:active {
+  .range-input:active {
     background-color: #756257;
   }
 
@@ -1176,12 +1204,12 @@
 
   .control-input:focus + .control-mark {
     background: #E5E5E5; 
-    border: 2px solid #83B3D3;
+    outline: 2px solid #83B3D3;
   }
   
   .control-input:disabled + .control-mark {
     background: #E5E5E5;
-    border: 3px solid #83B3D3
+    outline;: 3px solid #83B3D3
   }
 
   .control-input[type="checkbox"]:checked + .control-mark {
@@ -1299,6 +1327,7 @@
   }
 
   .product-card-link-title {
+    width: fit-content;
     grid-column: 1 / -1;
   }
 
@@ -1457,7 +1486,7 @@
     display: flex;
     width: 1200px;
     padding-top: 31px;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
   }
   
   .pagination-list {
